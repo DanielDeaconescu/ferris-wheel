@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.wheel {
+    height: 50vw;
+    width: 50vw;
+    border: 2px solid;
+    border-radius: 50%;
+    max-width: 500px;
+    max-height: 500px;
+    margin-left: 50px;
+    position: absolute;
+    animation-name: wheel;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.spin {
+    background-color: black;
+    width: 50%;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: top left;
+}
+
+.spin:nth-of-type(2) {
+    background-color: black;
+    width: 50%;
+    height: 2px;
+    position: absolute;
+    transform: rotate(60deg);
+}
+
+.spin:nth-of-type(3) {
+    background-color: black;
+    width: 50%;
+    height: 2px;
+    position: absolute;
+    transform: rotate(120deg);
+}
+
+.spin:nth-of-type(4) {
+    background-color: black;
+    width: 50%;
+    height: 2px;
+    position: absolute;
+    transform: rotate(180deg);
+}
+
+.spin:nth-of-type(5) {
+    background-color: black;
+    width: 50%;
+    height: 2px;
+    position: absolute;
+    transform: rotate(240deg);
+}
+
+.spin:nth-of-type(6) {
+    background-color: black;
+    width: 50%;
+    height: 2px;
+    position: absolute;
+    transform: rotate(300deg);
+}
+
+.cabin {
+    width: 20%;
+    height: 20%;
+    background-color: red;
+    position: absolute;
+    border: 2px solid;
+    transform-origin: 50% 0%;
+    animation: cabin 10s ease-in-out infinite;
+}
+
+.cabin:first-of-type {
+    right: -8.5%;
+    top: 50%;
+}
+
+.cabin:nth-of-type(2) {
+    right: 17%;
+    top: 93.5%;
+}
+
+.cabin:nth-of-type(3) {
+    right: 67%;
+    top: 93.5%;
+}
+
+.cabin:nth-of-type(4) {
+    left: -8.5%;
+    top: 50%;
+}
+
+.cabin:nth-of-type(5) {
+    left: 17%;
+    top: 7%;
+}
+
+.cabin:nth-of-type(6) {
+    right: 17%;
+    top: 7%;
+}
+
+/* Wheel animation */
+
+@keyframes wheel {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Cabin animation */
+
+@keyframes cabin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        background-color: yellow;
+    }
+
+    50% {
+        background-color: purple;
+    }
+
+    75% {
+        background-color: yellow;
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
